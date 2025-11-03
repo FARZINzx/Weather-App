@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>هواشناسی شهر شما</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ سامانه هواشناسی</h1>
+
+    <div class="form">
+      <input type="text" id="city" placeholder="نام شهر را وارد کنید...">
+      <input type="text" id="token" placeholder="توکن دسترسی...">
+      <button onclick="getWeather()">جستجو</button>
+    </div>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
