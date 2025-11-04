@@ -2,22 +2,44 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>هواشناسی شهر شما</title>
-  <link rel="stylesheet" href="style.css">
+  <title>وضعیت آب‌وهوا</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🌤️ سامانه هواشناسی</h1>
+  <div class="background-animation" id="bg-animation"></div>
 
-    <div class="form">
-      <input type="text" id="city" placeholder="نام شهر را وارد کنید...">
+  <div class="app-container">
+    <div class="search-box">
+      <input type="text" id="city" placeholder="نام شهر...">
       <input type="text" id="token" placeholder="توکن دسترسی...">
-      <button onclick="getWeather()">جستجو</button>
+      <button onclick="getWeather()">🔍 جستجو</button>
     </div>
 
-    <div id="result" class="result"></div>
+    <div id="weather-card" class="weather-card hidden">
+      <div class="weather-header">
+        <h2 id="city-name"></h2>
+        <p id="country"></p>
+      </div>
+
+      <div class="weather-main fade-in">
+        <img id="weather-icon" class="weather-icon" alt="">
+        <h1 id="temperature"></h1>
+        <p id="description"></p>
+      </div>
+
+      <div class="weather-details slide-up">
+        <div>💧 رطوبت: <span id="humidity"></span>%</div>
+        <div>🌬️ باد: <span id="wind"></span> m/s</div>
+        <div>🌡️ فشار: <span id="pressure"></span> hPa</div>
+        <div>👁 دید: <span id="visibility"></span> m</div>
+        <div>🌅 طلوع: <span id="sunrise"></span></div>
+        <div>🌇 غروب: <span id="sunset"></span></div>
+      </div>
+    </div>
+
+    <p id="error" class="error"></p>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

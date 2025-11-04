@@ -33,7 +33,7 @@ if (file_exists($cacheFile)) {
 }
 
 // اگر در cache نبود → درخواست جدید به API
-$url = OPENWEATHER_URL . "?q=" . urlencode($city) . "&appid=" . OPENWEATHER_API_KEY . "&units=metric&lang=fa";
+$url = OPENWEATHER_URL . "?q=" . urlencode($city) . "&appid=" . OPENWEATHER_API_KEY;
 
 // درخواست با CURL
 $ch = curl_init();
