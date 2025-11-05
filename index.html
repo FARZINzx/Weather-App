@@ -3,31 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>وضعیت آب‌وهوا</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./output.css">
 </head>
-<body>
-  <div class="background-animation" id="bg-animation"></div>
+<body class="min-h-screen bg-gradient-to-br from-sky-200 via-blue-100 to-slate-100 flex items-center justify-center font-[Vazirmatn]">
 
-  <div class="app-container">
-    <div class="search-box">
-      <input type="text" id="city" placeholder="نام شهر...">
-      <input type="text" id="token" placeholder="توکن دسترسی...">
-      <button onclick="getWeather()">🔍 جستجو</button>
+  <!-- container -->
+  <div class="relative w-[90%] md:w-[480px] bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-6 flex flex-col gap-4 transition-all duration-500 ease-in-out">
+    
+    <!-- search box -->
+    <div class="flex flex-col sm:flex-row gap-2 items-center justify-center">
+      <input id="city" type="text" placeholder="نام شهر..." class="w-full sm:flex-1 border border-gray-300 rounded-xl px-4 py-2 text-center outline-none focus:ring-2 focus:ring-sky-400 transition-all">
+      <input id="token" type="text" placeholder="توکن دسترسی..." class="w-full sm:flex-1 border border-gray-300 rounded-xl px-4 py-2 text-center outline-none focus:ring-2 focus:ring-sky-400 transition-all">
+      <button onclick="getWeather()" class="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-xl transition-all">جستجو</button>
     </div>
 
-    <div id="weather-card" class="weather-card hidden">
-      <div class="weather-header">
-        <h2 id="city-name"></h2>
-        <p id="country"></p>
+    <!-- weather card -->
+    <div id="weather-card" class="hidden flex flex-col items-center gap-4 text-gray-700 animate-fadeIn">
+      <div class="text-center">
+        <h2 id="city-name" class="text-2xl font-semibold"></h2>
+        <p id="country" class="text-sm text-gray-500"></p>
       </div>
 
-      <div class="weather-main fade-in">
-        <img id="weather-icon" class="weather-icon" alt="">
-        <h1 id="temperature"></h1>
-        <p id="description"></p>
+      <img id="weather-icon" class="w-28 h-28 animate-pulse" alt="">
+
+      <div class="text-center">
+        <h1 id="temperature" class="text-3xl font-bold"></h1>
+        <p id="description" class="text-gray-500"></p>
       </div>
 
-      <div class="weather-details slide-up">
+      <div class="grid grid-cols-2 gap-3 text-sm text-gray-600 w-full mt-2">
         <div>💧 رطوبت: <span id="humidity"></span>%</div>
         <div>🌬️ باد: <span id="wind"></span> m/s</div>
         <div>🌡️ فشار: <span id="pressure"></span> hPa</div>
@@ -37,9 +41,10 @@
       </div>
     </div>
 
-    <p id="error" class="error"></p>
+    <!-- error -->
+    <p id="error" class="text-red-600 text-center text-sm mt-2"></p>
   </div>
 
-  <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
