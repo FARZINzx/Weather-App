@@ -1,48 +1,48 @@
 {
-    "city": "sanandaj",
+    "city": "توکیو",
     "data": {
         "coord": {
-            "lon": 46.9923,
-            "lat": 35.3144
+            "lon": 139.6917,
+            "lat": 35.6895
         },
         "weather": [
             {
-                "id": 800,
-                "main": "Clear",
-                "description": "clear sky",
-                "icon": "01d"
+                "id": 801,
+                "main": "Clouds",
+                "description": "few clouds",
+                "icon": "02n"
             }
         ],
         "base": "stations",
         "main": {
-            "temp": 271.16,
-            "feels_like": 271.16,
-            "temp_min": 271.16,
-            "temp_max": 271.16,
-            "pressure": 1025,
-            "humidity": 55,
-            "sea_level": 1025,
-            "grnd_level": 832
+            "temp": 288.24,
+            "feels_like": 286.85,
+            "temp_min": 286.92,
+            "temp_max": 288.94,
+            "pressure": 1022,
+            "humidity": 40,
+            "sea_level": 1022,
+            "grnd_level": 1020
         },
         "visibility": 10000,
         "wind": {
-            "speed": 0,
-            "deg": 0
+            "speed": 9.26,
+            "deg": 330
         },
         "clouds": {
-            "all": 0
+            "all": 20
         },
-        "dt": 1762232570,
+        "dt": 1762517946,
         "sys": {
-            "type": 1,
-            "id": 7457,
-            "country": "IR",
-            "sunrise": 1762226174,
-            "sunset": 1762264495
+            "type": 2,
+            "id": 268395,
+            "country": "JP",
+            "sunrise": 1762463327,
+            "sunset": 1762501262
         },
-        "timezone": 12600,
-        "id": 117574,
-        "name": "Sanandij",
+        "timezone": 32400,
+        "id": 1850147,
+        "name": "Tokyo",
         "cod": 200
     }
 }
